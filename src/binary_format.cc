@@ -114,6 +114,7 @@ void FactorGraph::load_factors(const std::string &filename) {
       size_t should_equal_to;
       read_be_or_die(file, variable_id);
       read_be_or_die(file, should_equal_to);
+      std::cout << "***" << variable_id << " :: " << capacity.num_variables << "***" << std::endl; 
       assert(variable_id < capacity.num_variables && variable_id >= 0);
       // convert original var value into dense value
       size_t dense_val =
